@@ -1,0 +1,770 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width,user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimun-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" type="text/css" href="css/estilos.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <link rel="stylesheet" type="text/css" href="lib/sweetalert2.css">    
+    <link rel="shortcut icon" href="img/logosU/favicon.png" type="image/x-icon">
+    <link href="http://allfont.es/allfont.css?fonts=comfortaa" rel="stylesheet" type="text/css" />
+    <title>ToolsTIC | OCW</title>
+</head>
+
+<body>
+    <!--Menu-->
+    <div class="navbar-fixed">
+        <nav class="bg_verde">
+            <div class="nav-wrapper">
+                <!--<div class="container">-->
+                    <a href="./index.html" class="brand-logo "><img src="img/logosCurso/Logotipo1.png" alt="Logo ToolsTic" class="logoC responsive-img" title="Inicio ToolsTIC"></a>
+                    <a href="#" data-target="mobile-demo" class="sidenav-trigger left text"><i class="material-icons">menu_open</i></a>
+                    <ul class="right hide-on-med-and-down">
+                        <li><a href="#acerca_ocw" title="Descripción del OCW">
+                          <img src="img/principal/icoDescripcion.png" class="imgNavbar">Descripción</a>
+                        </li>
+                        <li><a href="#competencias_ocw" title="Competencias a desarrollar">
+                          <img src="img/principal/icoCompetencias.svg" class="imgNavbar">Competencias</a>
+                        </li>
+                        <li><a href="#syllabus" title="Contenido temático">
+                          <img src="img/principal/icoSillabus.svg" class="imgNavbar">Syllabus</a>
+                        </li>
+                        <!-- Dropdown Trigger -->
+                        <li><a class="dropdown-trigger" href="#kitBienvenida" data-target="id_drop"
+                            title="Despliega las opciones">Kit de bienvenida ocw<i
+                                class="material-icons right">arrow_drop_down</i></a></li>
+                        <li><a class="modal-trigger" href="#modalAyuda" title="Recomendaciones y preguntas">
+                          <img src="img/principal/icoAyuda.svg" class="imgNavbar">Ayuda</a>
+                        </li>
+                    </ul>
+                <!--</div>-->
+            </div>
+        </nav>
+    </div>
+
+    <ul id="id_drop" class="dropdown-content">
+      <li><a href="#modalPerfil" title="Conocimientos, habilidades y aptitudes"
+          class="white-text modal-trigger"><img src="img/principal/icoPerfil.svg" class="imgNavbar">Perfil estudiante</a></li>
+      <li class="divider"></li>
+      <li><a href="#modalRecursos" title="Materiales utilizados en el curso" class="white-text modal-trigger"><img
+        src="img/principal/icoRecursos.svg" class="imgNavbar">Rec. didácticos</a></li>
+      <li class="divider"></li>
+      <li><a href="#modalDuracion" title="Dosificación de los contenidos" class="white-text modal-trigger"><img
+        src="img/principal/icoDuracion.png" class="imgNavbar">Duración</a>
+      </li>
+    </ul>
+
+    <!-- MENU MOVIL-->
+    <ul id="mobile-demo" class="sidenav">
+        <li class="bg_verde"><img src="img/logosCurso/Logotipo1.png" alt="Logo ToolsTic" class="responsive-img"></li>
+        <li><a href="./index.html" class="hover_menu blue-text text-darken-4"><i class="material-icons left blue-text text-darken-4">account_balance</i>Inicio</a></li>
+        <li class="divider"></li>
+        <li><a href="#acerca_ocw" class="hover_menu blue-text text-darken-4"><i class="material-icons left blue-text text-darken-4">description</i>Descripción</a></li>
+        <li class="divider"></li>
+        <li><a href="#competencias_ocw" class="hover_menu blue-text text-darken-4"><i class="material-icons left blue-text text-darken-4">school</i>Competencias</a></li>
+        <li class="divider"></li>
+        <li><a href="#syllabus" title="Contenido temático" class="hover_menu blue-text text-darken-4"><i class="material-icons left blue-text text-darken-4">local_library</i>Syllabus</a>
+          <li class="divider"></li>
+        </li>
+        <!-- Dropdown Trigger -->
+        <li>
+          <ul class="collapsible collapsible-accordion">
+            <li>
+              <a class="hover_menu collapsible-header waves-effect blue-text text-darken-4">Kit de bienvenida ocw<i
+                  class="material-icons left blue-text text-darken-4">arrow_drop_down</i></a>
+              <div class="collapsible-body">
+                <ul>
+                  <li><a href="#modalPerfil" class="hover_menu modal-trigger blue-text text-darken-4" title="Conocimientos, habilidades y aptitudes"><i
+                        class="material-icons left blue-text text-darken-4">group</i>Perfil estudiante</a></li>
+                  <li class="divider"></li>
+                  <li><a href="#modalRecursos" class="hover_menu modal-trigger blue-text text-darken-4" title="Materiales utilizados en el curso"><i
+                        class="material-icons left blue-text text-darken-4">important_devices</i>Rec. didácticos</a></li>
+                  <li class="divider"></li>
+                  <li><a href="#modalDuracion" class="hover_menu modal-trigger blue-text text-darken-4" title="Dosificación de los contenidos"><i
+                        class="material-icons left blue-text text-darken-4">access_time</i>Duración</a>
+                  </li>
+                  <li class="divider"></li>
+                </ul>
+              </div>
+            </li>
+          </ul>
+        </li>
+        <li><a href="#modalAyuda" class="hover_menu modal-trigger blue-text text-darken-4"><i class="material-icons left blue-text text-darken-4">help</i>Ayuda</a></li>
+    </ul>
+
+    <!--Header-->
+    <header id="header">
+        <!--Banner-->
+        <div class="img-header">
+            <div class="welcome">
+                <img src="img/logosU/LogoBlanco.png" class="logoU responsive-img" alt="Logo Udenar">
+                <div class="container">
+                    <h1>Open Course Ware <br>Herramientas Informáticas</h1>
+                    <hr>
+                    <p>Este espacio está destinado para servir de apoyo al estudiante en su proceso formativo y en el
+                      cual encontrará una gran cantidad de recursos educativos para reforzar sus conocimientos, mejorar sus habilidades en el manejo de las TIC y seguir aprendiendo de una manera más divertida. </p>
+                </div>
+            </div>
+        </div>
+        <div id="acerca_ocw" class="skew-abajo"></div>
+    </header>
+
+    <!--Main-->
+    <main>
+        <!-- Acerca de OCW -->
+        <section class="acerca-de">
+            <div class="info-container">
+                <h2>Descripción del Open Course Ware.</h2>
+                <blockquote style="border-color: #019140;" class="justify">
+                  Este curso en modalidad Open Course Ware (OCW) está orientado a dar las herramientas claves y
+                  conocimientos necesarios para que el alumno se desenvuelva sin problemas en el ámbito informático.<br><br>
+
+                  El estudiante adquirirá conocimientos teóricos y prácticos relacionados a la creación y edición de
+                  medios audiovisuales, el manejo esencial de una computadora, la manipulación de editores de texto, la
+                  utilización de hojas de cálculo, recomendaciones para realizar una buena presentación y manipular la
+                  información con la que cuenta en Internet.<br><br>
+
+                  La <strong>finalidad de este OCW</strong>, es ejercitar las competencias básicas del módulo de
+                  Lenguaje y Herramientas Informáticas y preparar al estudiante para presentar la prueba de homologación
+                  del módulo. Para cumplir con lo anterior, cada unidad temática dispone de un test que sirve como
+                  simulacro de la prueba de homologación. Este test se lo puede realizar las veces que el estudiante lo
+                  considere necesario; de igual manera, todos los recursos didácticos, ofrecidos en este curso pueden
+                  ser estudiados y utilizados las veces que el alumno requiera ya que el OCW es de acceso libre. <br><br>
+
+                  Finalmente, cabe aclarar que este Open Corse Ware <strong>no genera notas, certificados o creditos que se acrediten en la Universidad</strong>, su finalidad es preparar al estudiante para facilitar la presentación de la prueba de homologación del curso de competencias en Lenguaje y Herramientas Informáticas.
+                </blockquote>
+                   <p><strong class="strong_1">Anímate y vamos aprender!!...</strong></p>
+            </div>
+        </section>
+
+        <!-- Competencias -->
+        <section id="competencias_ocw" class="our-projects">
+          <div class="skew-arriba"></div>
+            <div class="deg-background"></div>
+              <div class="ejeZproject">
+                <div class="container-project">
+                  <div class="project-title">
+                      <h2>Competencias del curso</h2>
+                      <hr>
+                  </div>
+                  <br>
+                    <div class="row center">
+                      <div class="col s12 m6 l3">
+                          <!-- Inicio 1° card-->
+                          <div class="card medium hoverable">
+                              <div class="card-image">
+                                  <a href="c1/index.php"><img src="img/ImgCompetencias/c1.gif" class="responsive-img"></a>
+                              </div>
+                              <div class="card-content">
+                                  <span class="titulos_card"><b>Alfabetización informacional</b></span>
+                              </div>
+                              <div class="card-action center">
+                                  <a href="c1/index.php" class="btn btn_iniciar bg_verde col s12"><i
+                                          class="material-icons right">open_in_new</i>Comenzar</a>
+                              </div>
+                          </div>
+                      </div> <!-- Fin 1° card-->
+
+                      <div class="col s12 m6 l3">
+                          <!-- Inicio 2° card-->
+                          <div class="card medium hoverable">
+                              <div class="card-image">
+                                  <a href="c2/index.php"><img src="img/ImgCompetencias/c2.gif"
+                                      class="responsive-img"></a>
+                              </div>
+                              <div class="card-content">
+                                  <span class="titulos_card"><b>Resolución de problemas con el uso de recursos computacionales</b></span>
+                              </div>
+                              <div class="card-action center">
+                                  <a href="c2/index.php" class="btn btn_iniciar bg_verde col s12"><i
+                                          class="material-icons right">open_in_new</i>Comenzar</a>
+                              </div>
+                          </div>
+                      </div><!-- Fin 2° card-->
+
+                      <div class="col s12 m6 l3">
+                        <!-- Inicio 3° card-->
+                        <div class="card medium hoverable">
+                          <div class="card-image">
+                            <a href="c3/index.php"><img src="img/ImgCompetencias/c3.gif" class="responsive-img"></a>
+                          </div>
+                          <div class="card-content">
+                            <span class="titulos_card"><b>Comunicación y colaboración en entornos
+                                digitales</b></span>
+                          </div>
+                          <div class="card-action center">
+                            <a href="c3/index.php" class="btn btn_iniciar bg_verde col s12"><i
+                                class="material-icons right">open_in_new</i>Comenzar</a>
+                          </div>
+                        </div>
+                      </div> <!-- Fin 3° card-->
+                      
+                      <div class="col s12 m6 l3">
+                        <!-- Inicio 4° card-->
+                        <div class="card medium hoverable">
+                          <div class="card-image">
+                            <a href="c4/index.php"><img src="img/ImgCompetencias/c4.gif" class="responsive-img"></a>
+                          </div>
+                          <div class="card-content">
+                            <span class="titulos_card"><b>Creación y publicación de contenidos
+                                digitales</b></span>
+                          </div>
+                          <div class="card-action center">
+                            <a href="c4/index.php" class="btn btn_iniciar bg_verde col s12"><i
+                                class="material-icons right">open_in_new</i>Comenzar</a>
+                          </div>
+                        </div>
+                      </div><!-- Fin 4° card-->
+                </div>
+              </div>
+          <div class="skew-abajo" id="syllabus"></div>
+        </section>
+
+        <!-- Syllabus -->
+        <section class="acerca-de">
+
+          <div class="info-container">
+            <h2>Syllabus</h2>
+            <div class="row">
+              <div class="col s12 m8 l8 center flow-text valign-wrapper">
+                <p>
+                  <blockquote style="border-color: #019140;">
+                    A continuación se muestran los módulos y actividades que conforman el curso. Se indica la intensidad horaria de cada módulo, así como las evidencias y tareas que se deben desarrollar en cada unidad. Para desarrollar las competencias del curso, se deben completar todos los módulos y poner a prueba tus conocimientos respondiendo los tests al final de cada unidad.
+                  </blockquote>
+                </p>
+              </div>
+              <div class="col s12 m4 l4 center">
+                <img src="img/syllabus/EscaleraStudiante.png" class="responsive-img" alt="Imagen syllabus">
+              </div>
+            </div>
+          </div>
+
+            <div class="row">
+
+              <div class="col s12 m3 l3 center">
+                <a href="#Unidad1">
+                <div  onclick="myFunction1()">
+                  <img src="img/syllabus/unidad1.png" class="responsive-img img_unidades" alt="Unidad 1">
+                </div>
+                </a>
+              </div>
+
+                <div class="col s12 m3 l3 center">
+                  <a href="#Unidad2">
+                  <div onclick="myFunction2()">
+                    <img src="img/syllabus/unidad2.png" class="responsive-img img_unidades" alt="Unidad 2">
+                  </div>
+                  </a>
+                </div>
+
+                <div class="col s12 m3 l3 center">
+                  <a href="#Unidad3">
+                  <div onclick="myFunction3()">
+                    <img src="img/syllabus/unidad3.png" class="responsive-img img_unidades" alt="Unidad 3">
+                  </div>
+                  </a>
+                </div>
+
+                <div class="col s12 m3 l3 center">
+                  <a href="#Unidad4">
+                    <div onclick="myFunction4()">
+                      <img src="img/syllabus/unidad4.png" class="responsive-img img_unidades" alt="Unidad 4">
+                    </div>
+                  </a>
+                </div>
+
+            </div>
+
+            <!--INICIO UNIDAD 1-->
+            <div class="row mystyle" id="Unidad1">
+              <div class="col s12 m12">
+                <div class="card card-panel">
+                  <div class="row">
+                    <div class="col s12 m4">
+                      <div class="row">
+                        <img class="materialboxed col s12 responsive-img" src="img/ImgCompetencias/c1.gif">
+                      </div>
+                      <div class="row center">
+                        <h5 class="card-panel cyan white-text center ">Intensidad horaria: <b>12 Horas</b></h5>
+                      </div>
+                    </div>
+                    <div class="col s12 m8">
+                      <h5 class="center"><b>CONTENIDO</b><hr></h5>
+
+                      <ul class="collapsible popout">
+                        <li>
+                          <div class="collapsible-header hover_item blue-text text-darken-4"><i
+                              class="material-icons blue-text text-darken-4">find_in_page</i>Busca
+                            información y contenidos digitales desde diferentes dispositivos a través de servicios
+                            en línea.</div>
+                          <div class="collapsible-body">
+                            <ul class="collection with-header">
+                              <li class="collection-item"><i class="material-icons left blue-text">book</i>Conceptos
+                                básicos de Internet.</li>
+                              <li class="collection-item"><i class="material-icons left blue-text">book</i>Motores de
+                                búsqueda y meta buscadores.</li>
+                              <li class="collection-item"><i class="material-icons left blue-text">book</i>Marcadores booleanos.</li>
+                              <li class="collection-item"><i class="material-icons left blue-text">book</i>Buscadores académicos.</li>
+                              <li class="collection-item"><i class="material-icons left blue-text">book</i>Bases de datos especializadas.</li>
+                            </ul>
+                          </div>
+                        </li>
+
+                        <li>
+                          <div class="collapsible-header hover_item blue-text text-darken-4"><i class="material-icons blue-text text-darken-4">save</i>Almacena
+                            información y contenidos digitales desde diferentes dispositivos a través de servicios
+                            en línea.</div>
+                          <div class="collapsible-body">
+                            <ul class="collection with-header">
+                              <li class="collection-item"><i class="material-icons left blue-text">book</i>Servidores de almacenamiento.</li>
+                              <li class="collection-item"><i class="material-icons left blue-text">book</i>Infoxicación.</li>
+                              <li class="collection-item"><i class="material-icons left blue-text">book</i>Almacenamiento en la nube y sincronización.</li>
+                              <li class="collection-item"><i class="material-icons left blue-text">book</i>Copias de seguridad.</li>
+                            </ul>
+                          </div>
+                        </li>
+
+                        <li>
+                          <div class="collapsible-header hover_item blue-text text-darken-4"><i class="material-icons blue-text text-darken-4">folder_special</i>Recupera
+                            información y contenidos digitales desde diferentes dispositivos a través de
+                            herramientas digitales.</div>
+                          <div class="collapsible-body">
+                            <ul class="collection with-header">
+                              <li class="collection-item"><i class="material-icons left blue-text">book</i>Herramientas para recuperar información.</li>
+                              <li class="collection-item"><i class="material-icons left blue-text">book</i>Restauración de información.</li>
+                              <li class="collection-item"><i class="material-icons left blue-text">book</i>Gestión tipos de información.</li>
+                            </ul>
+                          </div>
+                        </li>
+
+                        <li>
+                          <div class="collapsible-header hover_item blue-text text-darken-4"><i class="material-icons blue-text text-darken-4">filter_list</i>Filtra
+                            información y contenidos digitales desde diferentes dispositivos a través de servicios
+                            en línea.</div>
+                          <div class="collapsible-body">
+                            <ul class="collection with-header">
+                              <li class="collection-item"><i class="material-icons left blue-text">book</i>Modelo gavilanes y modelo Big6.</li>
+                              <li class="collection-item"><i class="material-icons left blue-text">book</i>Curación de contenidos.</li>
+                              <li class="collection-item"><i class="material-icons left blue-text">book</i>Marcadores sociales.</li>
+                            </ul>
+                          </div>
+                        </li>
+                        
+                      </ul>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <!--FIN UNIDAD 1-->
+
+            <!--INICIO UNIDAD 2-->
+            <div class="row mystyle" id="Unidad2">
+              <div class="col s12 m12">
+                <div class="card card-panel">
+                  <div class="row">
+                    <div class="col s12 m4">
+                      <div class="row">
+                        <img class="materialboxed col s12 responsive-img" src="img/ImgCompetencias/c2.gif">
+                      </div>
+                      <div class="row center">
+                        <h5 class="card-panel cyan white-text center ">Intensidad horaria: <b>8 Horas</b></h5>
+                      </div>
+                    </div>
+                    <div class="col s12 m8">
+                      <h5 class="center"><b>CONTENIDO</b><hr></h5>
+
+                      <ul class="collapsible popout">
+                        <li>
+                          <div class="collapsible-header hover_item blue-text text-darken-4"><i
+                              class="material-icons blue-text text-darken-4">search</i>Identifica
+                            problemas
+                            técnicos en diferentes dispositivos a través de entornos digitales.</div>
+                          <div class="collapsible-body">
+                            <ul class="collection with-header">
+                              <li class="collection-item"><i class="material-icons left blue-text">book</i>Terminología de ordenadores.</li>
+                              <li class="collection-item"><i class="material-icons left blue-text">book</i>Hardware y software.</li>
+                              <li class="collection-item"><i class="material-icons left blue-text">book</i>Componentes de ordenadores.</li>
+                              <li class="collection-item"><i class="material-icons left blue-text">book</i>Problemas técnicos.</li>
+                              <li class="collection-item"><i class="material-icons left blue-text">book</i>Administración de archivos.</li>
+                            </ul>
+                          </div>
+                        </li>
+
+                        <li>
+                          <div class="collapsible-header hover_item blue-text text-darken-4"><i
+                              class="material-icons blue-text text-darken-4">done_all</i>Selecciona herramientas
+                            informáticas para dar solución a problemas técnicos a través de entornos digitales.</div>
+                          <div class="collapsible-body">
+                            <ul class="collection with-header">
+                              <li class="collection-item"><i class="material-icons left blue-text">book</i>Herramientas de diagnóstico.</li>
+                              <li class="collection-item"><i class="material-icons left blue-text">book</i>Herramientas de corrección.</li>
+                              <li class="collection-item"><i class="material-icons left blue-text">book</i>Almacenamiento en la nube y sincronización.</li>
+                              <li class="collection-item"><i class="material-icons left blue-text">book</i>WorkSpace</li>
+                            </ul>
+                          </div>
+                        </li>
+
+                        <li>
+                          <div class="collapsible-header hover_item blue-text text-darken-4"><i class="material-icons blue-text text-darken-4">format_paint</i>Utiliza
+                            herramientas
+                            apropiadas para resolver las necesidades técnicas detectadas a través de entornos digitales.
+                          </div>
+                          <div class="collapsible-body">
+                            <ul class="collection with-header">
+                              <li class="collection-item"><i class="material-icons left blue-text">book</i>Virus y Antivirus.</li>
+                              <li class="collection-item"><i class="material-icons left blue-text">book</i>Malware, Spyware y Adware. </li>
+                              <li class="collection-item"><i class="material-icons left blue-text">book</i>Tipos de mantenimientos en sistema de cómputo.</li>
+                              <li class="collection-item"><i class="material-icons left blue-text">book</i>Soporte y acceso remoto.</li>
+                            </ul>
+                          </div>
+                        </li>
+                        
+                      </ul>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <!--FIN UNIDAD 2-->
+
+            <!--INICIO UNIDAD 3-->
+            <div class="row mystyle" id="Unidad3">
+              <div class="col s12 m12">
+                <div class="card card-panel">
+                  <div class="row">
+                    <div class="col s12 m4">
+                      <div class="row">
+                        <img class="materialboxed col s12 responsive-img" src="img/ImgCompetencias/c3.gif">
+                      </div>
+                      <div class="row center">
+                        <h5 class="card-panel cyan white-text center">Intensidad horaria: <b>20 Horas</b></h5>
+                      </div>
+                    </div>
+                    <div class="col s12 m8">
+                      <h5 class="center"><b>CONTENIDO</b><hr></h5>
+
+                      <ul class="collapsible popout">
+                        <li>
+                          <div class="collapsible-header hover_item blue-text text-darken-4"><i
+                              class="material-icons blue-text text-darken-4">supervised_user_circle</i>Interactúa con
+                            comunidades digitales a
+                            través de herramientas en línea para difundir información.</div>
+                          <div class="collapsible-body">
+                            <ul class="collection with-header">
+                              <li class="collection-item"><i class="material-icons left blue-text">book</i>Comunidades digitales.</li>
+                              <li class="collection-item"><i class="material-icons left blue-text">book</i>Herramientas sincrónicas y asincrónicas.</li>
+                              <li class="collection-item"><i class="material-icons left blue-text">book</i>Evolución de la web. (web 1.0, web 2.0 y web 3.0).</li>
+                            </ul>
+                          </div>
+                        </li>
+
+                        <li>
+                          <div class="collapsible-header hover_item blue-text text-darken-4"><i class="material-icons blue-text text-darken-4">share</i>Comparte
+                            información
+                            en comunidades digitales a través de herramientas en línea.</div>
+                          <div class="collapsible-body">
+                            <ul class="collection with-header">
+                              <li class="collection-item"><i class="material-icons left blue-text">book</i>Herramientas de comunicación y colaboración.</li>
+                              <li class="collection-item"><i class="material-icons left blue-text">book</i>Herramientas libres y con licencia.</li>
+                              <li class="collection-item"><i class="material-icons left blue-text">book</i>Herramientas ofimáticas. (offline y online).</li>
+                            </ul>
+                          </div>
+                        </li>
+
+                        <li>
+                          <div class="collapsible-header hover_item blue-text text-darken-4"><i
+                              class="material-icons blue-text text-darken-4">search</i>Identifica las normas
+                            de comportamiento en entornos digitales para interactuar a través de la red.</div>
+                          <div class="collapsible-body">
+                            <ul class="collection with-header">
+                              <li class="collection-item"><i class="material-icons left blue-text">book</i>Peligros en la red.</li>
+                              <li class="collection-item"><i class="material-icons left blue-text">book</i>Netiqueta.</li>
+                            </ul>
+                          </div>
+                        </li>
+
+                        <li>
+                          <div class="collapsible-header hover_item blue-text text-darken-4"><i class="material-icons blue-text text-darken-4">mode_edit</i>Gestiona
+                            la identidad
+                            digital protegiendo datos personales que se proporcionan a través de la red.</div>
+                          <div class="collapsible-body">
+                            <ul class="collection with-header">
+                              <li class="collection-item"><i class="material-icons left blue-text">book</i>Identidad digital.</li>
+                              <li class="collection-item"><i class="material-icons left blue-text">book</i>Administración identidad digital.</li>
+                            </ul>
+                          </div>
+                        </li>
+                        
+                      </ul>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <!--FIN UNIDAD 3-->
+
+            <!--INICIO UNIDAD 4-->
+            <div class="row mystyle" id="Unidad4">
+              <div class="col s12 m12">
+                <div class="card card-panel">
+                  <div class="row">
+                    <div class="col s12 m4">
+                      <div class="row">
+                        <img class="materialboxed col s12 responsive-img" src="img/ImgCompetencias/c4.gif">
+                      </div>
+                      <div class="row center">
+                        <h5 class="card-panel cyan white-text center ">Intensidad horaria: <b>20 Horas</b></h5>
+                      </div>
+                    </div>
+                    <div class="col s12 m8">
+                      <h5 class="center"><b>CONTENIDO</b><hr></h5>
+
+                      <ul class="collapsible popout">
+                        <li>
+                          <div class="collapsible-header hover_item blue-text text-darken-4"><i class="material-icons blue-text text-darken-4">build</i>Integra
+                            recursos
+                            digitales existentes en la creación de contenido nuevo mediante herramientas de edición
+                            audiovisual y gráfica.</div>
+                          <div class="collapsible-body">
+                            <ul class="collection with-header">
+                              <li class="collection-item"><i class="material-icons left blue-text">book</i>Herramientas online y offline de edición audiovisual.</li>
+                              <li class="collection-item"><i class="material-icons left blue-text">book</i>Formatos en el contenido digital.</li>
+                              <li class="collection-item"><i class="material-icons left blue-text">book</i>Producción de contenidos multimediales.</li>
+                              <li class="collection-item"><i class="material-icons left blue-text">book</i>Organizadores gráficos.</li>
+                              <li class="collection-item"><i class="material-icons left blue-text">book</i>Presentaciones efectivas.</li>
+                            </ul>
+                          </div>
+                        </li>
+
+                        <li>
+                          <div class="collapsible-header hover_item blue-text text-darken-4"><i class="material-icons blue-text text-darken-4">photo_camera</i>Publica
+                            contenidos en
+                            diferentes formatos como productos multimedia a través de medios digitales.</div>
+                          <div class="collapsible-body">
+                            <ul class="collection with-header">
+                              <li class="collection-item"><i class="material-icons left blue-text">book</i>Portafolio digital.</li>
+                              <li class="collection-item"><i class="material-icons left blue-text">book</i>Bancos de recursos multimedia.</li>
+                              <li class="collection-item"><i class="material-icons left blue-text">book</i>Reutilización y distribución de contenidos.</li>
+                            </ul>
+                          </div>
+                        </li>
+
+                        <li>
+                          <div class="collapsible-header hover_item blue-text text-darken-4"><i class="material-icons blue-text text-darken-4">touch_app</i>Aplica
+                            derechos de
+                            autor a la información encontrada en la red y divulga contenidos a través de diferentes
+                            plataformas digitales.</div>
+                          <div class="collapsible-body">
+                            <ul class="collection with-header">
+                              <li class="collection-item"><i class="material-icons left blue-text">book</i>Normas para publicación de contenido.</li>
+                              <li class="collection-item"><i class="material-icons left blue-text">book</i>Licencias y Creative Commons..</li>
+                              <li class="collection-item"><i class="material-icons left blue-text">book</i>Derechos de autor. </li>
+                            </ul>
+                          </div>
+                        </li>
+                        
+                      </ul>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <!--FIN UNIDAD 4-->
+        </section>
+
+        <!--Kit de bienvenida-->
+        <section id="kitBienvenida" class="our-projects1">
+          <div class="skew-arriba"></div>
+          <div class="deg-background"></div>
+          <div class="ejeZproject">
+            <div class="container-project">
+              <div class="project-title">
+                <h2>Kit de bienvenida</h2>
+                <hr>
+              </div>
+              <br>
+              <!--RUTA-->
+              <div class="container">
+                <div class="row">
+
+                  <div class="col s12 m4 l4">
+                    <div class="kitI card-panel">
+                      <h2><b>Perfil del estudiante</b></h2>
+                      <a class="modal-trigger" href="#modalPerfil"><img src="img/kit/perfil.png" class="responsive-img"></a>
+                    </div>
+                  </div>
+
+                  <div class="col s12 m4 l4">
+                    <div class="kitI card-panel">
+                      <h2><b>Recursos didácticos</b></h2>
+                      <a class="modal-trigger" href="#modalRecursos"><img src="img/kit/rec_didacticos.png" class="responsive-img"></a>
+                    </div>
+                  </div>
+
+                  <div class="col s12 m4 l4 hoverable">
+                    <div class="kitI card-panel">
+                      <h2><b>Duración OCW</b></h2>
+                      <a class="modal-trigger" href="#modalDuracion"><img src=" img/kit/duracion.png" class="responsive-img"></a>
+                    </div>
+                  </div>
+
+                </div>
+              </div>
+              <!-- FIN RUTA -->
+            </div>
+        </section>
+
+        <!--MODAL PERFIL-->
+        <div id="modalPerfil" class="modal modal-fixed-footer">
+          <div class="modal-content">
+            <embed src="docs/Perfil_Estudiante.pdf" type="application/pdf" width="100%" height="100%" />
+          </div>
+          <div class="modal-footer">
+            <a href="#!" class="modal-close btn waves-effect waves-green btn-flat">Continuar</a>
+          </div>
+        </div>
+        
+        <!--MODAL RECURSOS-->
+        <div id="modalRecursos" class="modal modal-fixed-footer">
+          <div class="modal-content">
+            <embed src="docs/Recursos_Didacticos.pdf" type="application/pdf" width="100%" height="100%" />
+          </div>
+          <div class="modal-footer">
+            <a href="#!" class="modal-close btn waves-effect waves-green btn-flat">Continuar</a>
+          </div>
+        </div>
+        
+        <!--MODAL DURACION-->
+        <div id="modalDuracion" class="modal modal-fixed-footer">
+          <div class="modal-content">
+            <img src="img/kit/duracion/cronograma1.jpg" alt="Cronograma OCW" class="responsive-img">
+          </div>
+          <div class="modal-footer">
+            <a href="#!" class="modal-close btn waves-effect waves-green btn-flat">Continuar</a>
+          </div>
+        </div>
+
+        <!--MODAL AYUDA-->
+        <div id="modalAyuda" class="modal modal-fixed-footer">
+          <div class="modal-content">
+            <embed src="docs/Ayuda.pdf" type="application/pdf" width="100%" height="100%" />
+          </div>
+          <div class="modal-footer">
+            <a href="#!" class="modal-close btn waves-effect waves-green btn-flat">Continuar</a>
+          </div>
+        </div>
+
+        <!--MODAL AVISO LEGAL-->
+        <div id="modalAviso" class="modal modal-fixed-footer">
+          <div class="modal-content">
+            <img src="img/ruta/duracion/Cronograma.jpg" alt="Cronograma OCW" class="responsive-img">
+          </div>
+          <div class="modal-footer">
+            <a href="#!" class="modal-close btn waves-effect waves-green btn-flat">Continuar</a>
+          </div>
+        </div>
+    </main>
+
+    <!--Footer-->
+    <footer class="bg_blue page-footer">
+        <div class="container">
+            <div class="row">
+              <div class="col s12 m8 l8 left-align">
+                <h5 class="white-text">Contacto sede Pasto</h5>
+                <ul>
+                  <li><a class="grey-text text-lighten-3" href="#!"><i
+                        class="material-icons tiny">house</i> Calle #18 Carrera 50 Ciudadela Universitaria Torobajo.</a></li>
+                  <li><a class="grey-text text-lighten-3" href="#!"><i
+                        class="material-icons tiny">location_on</i> Pasto - Nariño, Colombia.</a></li>
+                  <li><a class="grey-text text-lighten-3" href="#!"><i
+                        class="material-icons tiny">phone</i> 7000000</a></li>
+                  <li><a class="grey-text text-lighten-3" href="#!"><i
+                        class="material-icons tiny">mail</i> toolstic@udenar.edu.co</a></li>
+                </ul>
+              </div>
+                <div class="col s12 offset-l2 m4 l2 responsive-img right">
+                    <img src="img/logosU/udenar1.png" alt="Escudo Udenar" width="150">
+                </div>
+            </div>
+        </div>
+        <div class="footer-copyright darken-5">
+            <div class="container">
+                © 2020 Licencia Creative Commons. | <a class="modal-trigger white-text" href="#modalAviso">Aviso legal.</a>
+                <a class="grey-text text-lighten-4 right" href="#!">Desarrollado Por: <b>Proyecto @ToolsTic.</b></a>
+            </div>
+        </div>
+    </footer>
+
+
+    <!-- Compiled and minified JavaScript -->
+    <script type="text/javascript" src="lib/sweetalert2.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', function () {
+          //M.AutoInit();
+          var elems = document.querySelectorAll('.sidenav');
+          var instances = M.Sidenav.init(elems);
+
+          var elems = document.querySelectorAll('.dropdown-trigger');
+          var instances = M.Dropdown.init(elems);
+
+          var elems = document.querySelectorAll('.collapsible');
+          var instances = M.Collapsible.init(elems);
+
+          var elems = document.querySelectorAll('.modal');
+          var instances = M.Modal.init(elems);
+        });
+
+        var element1 = document.getElementById("Unidad1");
+        var element2 = document.getElementById("Unidad2");
+        var element3 = document.getElementById("Unidad3");
+        var element4 = document.getElementById("Unidad4");
+
+        function myFunction1() {
+          element1.classList.toggle("mystyle");
+          element2.classList.add("mystyle");
+          element3.classList.add("mystyle");
+          element4.classList.add("mystyle");      
+        }
+
+        function myFunction2() {
+          element2.classList.toggle("mystyle");
+          element1.classList.add("mystyle");
+          element3.classList.add("mystyle");
+          element4.classList.add("mystyle");
+        }
+       
+        function myFunction3() {        
+          element3.classList.toggle("mystyle");
+          element1.classList.add("mystyle");
+          element2.classList.add("mystyle");
+          element4.classList.add("mystyle");
+        }
+
+        function myFunction4() {
+          element4.classList.toggle("mystyle");
+          element1.classList.add("mystyle");
+          element2.classList.add("mystyle");
+          element3.classList.add("mystyle");
+        }
+    </script>
+
+    <script type="text/javascript">
+        Swal({
+            imageUrl: '../ocw/img/principal/nina_principal.svg',
+            imageWidth: '50%',
+            imageHeight: '50%',
+            title: 'Bienvenido!!',
+            text: 'Estas a punto de ingresar al Open Course Ware (OCW) de competencias en Lenguaje y Herramientas Informáticas de la Universidad de Nariño.',
+            imageAlt: 'Nino',
+            confirmButtonColor: '#019140',
+		        confirmButtonText: 'Entendido'
+        });
+    </script>
+</body>
+</html>
